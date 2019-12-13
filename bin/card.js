@@ -14,33 +14,34 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('Max Stoiber /'),
-  handle: chalk.cyan('mxstbr'),
-  work: chalk.white('Software Engineer at GitHub'),
-  twitter: chalk.cyan('twitter.com/mxstbr'),
-  github: chalk.cyan('github.com/mxstbr'),
-  linkedin: chalk.cyan('linkedin.com/in/mxstbr'),
-  web: chalk.cyan('mxstbr.com'),
-  npx: chalk.white('npx mxstbr'),
-  labelWork: chalk.white.bold('      Work:'),
+  handle: chalk.cyan('lachlanjc'),
+  name: chalk.white('Lachlan Campbell'),
+  now: chalk.white('Web designer-dev – IMA @ NYU, ’23'),
+  twitter: chalk.cyan('twitter.com/lachlanjc'),
+  github: chalk.cyan('github.com/lachlanjc'),
+  glitch: chalk.cyan('glitch.com/@lachlanjc'),
+  web: chalk.cyan('lachlanjc.me'),
+  npx: chalk.white('npx lachlanjc'),
+  labelNow: chalk.white.bold('       Now:'),
   labelTwitter: chalk.white.bold('   Twitter:'),
   labelGitHub: chalk.white.bold('    GitHub:'),
-  labelLinkedIn: chalk.white.bold('  LinkedIn:'),
+  labelGlitch: chalk.white.bold('    Glitch:'),
   labelWeb: chalk.white.bold('       Web:'),
   labelCard: chalk.white.bold('      Card:')
 }
 
 // Actual strings we're going to output
-const newline = '\n'
-const heading = `${data.name} ${data.handle}`
-const working = `${data.labelWork}  ${data.work}`
+const nl = '\n'
+const heading = `@${data.handle} – ${data.name}`
+const nowing = `${data.labelNow}  ${data.now}`
 const twittering = `${data.labelTwitter}  ${data.twitter}`
 const githubing = `${data.labelGitHub}  ${data.github}`
-const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
+const glitching = `${data.labelGlitch}  ${data.glitch}`
 const webing = `${data.labelWeb}  ${data.web}`
 const carding = `${data.labelCard}  ${data.npx}`
 
 // Put all our output together into a single variable so we can use boxen effectively
-const output = heading + newline + newline + working + newline + twittering + newline + githubing + newline + linkedining + newline + webing + newline + newline + carding
+const output =
+  heading + nl + nl + nowing + nl + twittering + nl + githubing + nl + glitching + nl + webing + nl + nl + carding
 
-console.log(chalk.green(boxen(output, options)))
+console.log(chalk.cyan(boxen(output, options)))
