@@ -1,7 +1,9 @@
-It's me, Max!
+# @lachlanjc
+
+It’s me, Lachlan!
 
 # Usage
 
 ```
-npx mxstbr
+npx lachlanjc
 ```
